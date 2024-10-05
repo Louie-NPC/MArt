@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">MArt Application</string>
+
+    <string name="msg_welcome_to_mart">Welcome to MArt: Captivating Souls, One Artwork at a Time, where every piece tells a story and every stroke of the brush captures the essence of human experience.</string>
+    <string name="msg_captivating_souls">Captivating Souls, One Artwork at a Time</string>
+    <string name="lbl_get_started">Get Started</string>
+    <string name="msg_enter_your_email_add">Enter your Email-Add</string>
+    <string name="msg_don_t_have_an_account">Don\u2019t have an account?</string>
+    <string name="lbl_login">Login</string>
+    <string name="lbl_welcome_back">Welcome Back !</string>
+    <string name="lbl_email_address">Email Address</string>
+    <string name="lbl_enter_password">Enter password</string>
+    <string name="lbl_forget_password">Forget Password</string>
+    <string name="lbl_sign_up">Sign up</string>
+    <string name="lbl_password">Password</string>
+    <string name="msg_let_s_help_you_to">Let\u2019s help you to create and discover art.</string>
+    <string name="lbl_last_name">Last Name</string>
+    <string name="lbl_enter_your_name">Enter your name</string>
+    <string name="msg_confirm_password">Confirm password</string>
+    <string name="lbl_first_name">First Name</string>
+    <string name="lbl_register">Register</string>
+    <string name="msg_already_have_an">Already have an account? </string>
+    <string name="lbl_log_in"> Log In</string>
+    <string name="lbl_submit">Submit</string>
+    <string name="msg_enter_your_email_add2">Enter your Email-Add</string>
+    <string name="lbl_verify">Verify</string>
+    <string name="lbl_new_password">New password</string>
+    <string name="msg_enter_new_password">Enter New password</string>
+    <string name="msg_confim_password">Confim password</string>
+    <string name="lbl_confirm">Confirm</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category">Category</string>
+    <string name="group">Group</string>
+    <string name="new_post">New Post</string>
+    <string name="notification">Notification</string>
+    <string name="user">User</string>
+    <string name="lbl_m_art">M·Art</string>
+    <string name="todo">TODO</string>
+    <string name="m_art">M-Art</string>
+</resources>

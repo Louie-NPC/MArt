@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".authentication.GetStarted">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearColumnview"
+        style="@style/groupStyleblack_900"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <View
+            android:id="@+id/viewView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imageImagethirteen"
+            android:layout_width="375dp"
+            android:layout_height="236dp"
+            android:layout_marginTop="170dp"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_image_13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/txtCaptivating"
+            style="@style/txtPoppinsbold24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/msg_captivating_souls"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageImagethirteen" />
+
+        <TextView
+            android:id="@+id/txtDescription"
+            style="@style/txtPoppinssemibold18"
+            android:layout_width="279dp"
+            android:layout_height="162dp"
+            android:gravity="center_horizontal"
+            android:text="@string/msg_welcome_to_mart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCaptivating" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGetStarted"
+            style="@style/btnSolidRounded"
+            android:layout_width="319dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/gradientbttns"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingBottom="@dimen/_14pxv"
+            android:singleLine="true"
+            android:text="@string/lbl_get_started"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

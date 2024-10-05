@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".authentication.EnterOtp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="393dp"
+        android:layout_height="298dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_image_6" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="356dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Enter OTP"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="A 4 digits code has been sent to  \nExample@gmail.com"
+        android:textAlignment="center"
+        android:textColor="#818181"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView23"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/otpViewOtpview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:inputType="number"
+        android:itemBackground="@color/blue_gray_100"
+        app:itemCount="4"
+        app:itemHeight="@dimen/_46pxv"
+        app:itemSpacing="@dimen/_23pxh"
+        app:itemWidth="@dimen/_46pxh"
+        app:lineColor="@android:color/transparent"
+        app:viewType="rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Didn't receive the code?"
+        android:textColor="#818181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otpViewOtpview" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Resend code"
+        android:textColor="@color/red_A700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otpViewOtpview" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnVerify"
+        style="@style/btnSolidRounded"
+        android:layout_width="319dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/gradientbttns"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingStart="@dimen/_30pxh"
+        android:paddingTop="@dimen/_14pxv"
+        android:paddingEnd="@dimen/_30pxh"
+        android:paddingBottom="@dimen/_14pxv"
+        android:singleLine="true"
+        android:text="@string/lbl_verify"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/lbl_verify" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
