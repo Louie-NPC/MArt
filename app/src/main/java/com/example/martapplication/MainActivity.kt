@@ -1,52 +1,60 @@
 package com.example.martapplication
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.navigation.NavHostController
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupWithNavController
-import com.example.martapplication.authentication.ForgetPassword
-import com.example.martapplication.authentication.Regestre
-import com.example.martapplication.databinding.ActivityMainBinding
-import com.example.martapplication.databinding.ActivityRegisterBinding
+import com.example.martapplication.fragment.HomeFragment
+import com.example.martapplication.fragment.MessagesFragment
+import com.example.martapplication.fragment.NotificationFragment
+import com.example.martapplication.fragment.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
-    private val binding: ActivityMainBinding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
-    }
+class MainActivity : AppCompatActivity(),BottomNavigationView.OnNavigationItemSelectedListener {
+
+    lateinit var bottomNavigationView:BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(binding.root)
-        binding.post.setOnClickListener {
-            val intent = Intent(this, ForgetPassword::class.java)
-            startActivity(intent)
+        setContentView(R.layout.activity_main)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+
+
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView)
+        bottomNavigationView.setOnNavigationItemSelectedListener(this)
+
+        supportFragmentManager.beginTransaction().replace(R.id.nav_fragment, HomeFragment()).commit()
+    }
+
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.homeFragment -> {
+                val fragment = HomeFragment()
+                supportFragmentManager.beginTransaction().replace(R.id.nav_fragment, fragment, fragment.javaClass.simpleName)
+                    .commit()
+                return true
+            }
+            R.id.messagesFragment -> {
+                val fragment = MessagesFragment()
+                supportFragmentManager.beginTransaction().replace(R.id.nav_fragment, fragment, fragment.javaClass.simpleName)
+                    .commit()
+                return true
+            }
+            R.id.notificationFragment -> {
+                val fragment = NotificationFragment()
+                supportFragmentManager.beginTransaction().replace(R.id.nav_fragment, fragment, fragment.javaClass.simpleName)
+                    .commit()
+                return true
+            }
+            R.id.profileFragment -> {
+                val fragment = ProfileFragment()
+                supportFragmentManager.beginTransaction().replace(R.id.nav_fragment, fragment, fragment.javaClass.simpleName)
+                    .commit()
+                return true
+            }
         }
-        binding.category.setOnClickListener{
-            val intent = Intent(this, ForgetPassword::class.java)
-            startActivity(intent)
-        }
-        binding.messages.setOnClickListener {
-            val intent = Intent(this, ForgetPassword::class.java)
-            startActivity(intent)
-        }
-        binding.notification.setOnClickListener {
-            val intent = Intent(this, ForgetPassword::class.java)
-            startActivity(intent)
-        }
-        binding.profile.setOnClickListener {
-            val intent = Intent(this, ForgetPassword::class.java)
-            startActivity(intent)
-        }
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        return false
     }
 }

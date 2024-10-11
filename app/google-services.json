@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "350314696359",
+    "project_id": "mart-229d5",
+    "storage_bucket": "mart-229d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350314696359:android:46141e8f0e4e8d688dd582",
+        "android_client_info": {
+          "package_name": "com.example.martapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLbYKhD42-2mUaRVJUhsY974lAExRgP-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
