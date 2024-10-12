@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearColumnarrowOne"
+        style="@style/groupStyleblack_900"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_3pxv"
+        android:paddingBottom="@dimen/_30pxv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:contentInsetStart="0dp">
+
+            <ImageView
+                android:id="@+id/imageArrowOne"
+                android:layout_width="@dimen/_22pxh"
+                android:layout_height="@dimen/_21pxh"
+                android:layout_marginStart="@dimen/_21pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_marginEnd="@dimen/_133pxh"
+                android:layout_marginBottom="@dimen/_9pxv"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_arrow" />
+
+            <TextView
+                android:id="@+id/txtEditprofile"
+                style="@style/txtIntersemibold24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_gravity="center"
+                tools:text="@string/lbl_edit_profile" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/linearColumnsolarcame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_9pxh"
+            android:paddingEnd="@dimen/_9pxh"
+            app:layout_constraintTop_toBottomOf="@id/toolbarToolbar">
+
+            <FrameLayout
+                android:id="@+id/frameStacksolarcamer"
+                android:layout_width="@dimen/_171pxh"
+                android:layout_height="@dimen/_189pxv"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageSolarcamerami"
+                    android:layout_width="@dimen/_32pxh"
+                    android:layout_height="@dimen/_32pxh"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="@dimen/_11pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_solar_camera_mi"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_solar_camera_mi" />
+
+                <FrameLayout
+                    android:id="@+id/frameStackview"
+                    android:layout_width="@dimen/_171pxh"
+                    android:layout_height="@dimen/_175pxv"
+                    android:layout_gravity="top|center">
+
+                    <View
+                        android:id="@+id/viewView"
+                        android:layout_width="@dimen/_171pxh"
+                        android:layout_height="@dimen/_175pxh"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rectangle_border_white_a700_radius_87" />
+
+                    <ImageView
+                        android:id="@+id/imageImage"
+                        android:layout_width="@dimen/_165pxh"
+                        android:layout_height="@dimen/_170pxh"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_ellipse_2" />
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Add layout constraints for text inputs -->
+        <LinearLayout
+            android:id="@+id/linearColumnname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:gravity="start"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/frameStacksolarcamer">
+
+            <TextView
+                android:id="@+id/txtName"
+                style="@style/txtInterbold16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:text="@string/lbl_name" />
+
+            <EditText
+                android:id="@+id/etName"
+                style="@style/etRoundedOutline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7pxv"
+                android:background="@drawable/rectangle_border_gray_800_23_radius_6"
+                android:ellipsize="end"
+                android:hint="name"
+                android:inputType="text"
+                android:paddingStart="@dimen/_15pxh"
+                android:paddingTop="@dimen/_13pxv"
+                android:paddingEnd="@dimen/_15pxh"
+                android:paddingBottom="@dimen/_13pxv"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_800_01"
+                tools:ignore="Autofill" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearColumnbio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_marginTop="@dimen/_14pxv"
+            android:gravity="start"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/linearColumnname">
+
+            <TextView
+                android:id="@+id/txtBio"
+                style="@style/txtInterbold16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:text="@string/lbl_bio" />
+
+            <EditText
+                android:id="@+id/etBiovalueOne"
+                style="@style/etRoundedOutline_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:background="@drawable/rectangle_border_gray_800_23_radius_6"
+                android:ellipsize="end"
+                android:hint="bio"
+                android:inputType="text"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_13pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingBottom="@dimen/_13pxv"
+                android:singleLine="true"
+                android:textColorHint="@color/gray_800"
+                tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearColumndateofbir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:gravity="start"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/linearColumnbio">
+
+                <TextView
+                    android:id="@+id/txtDateofbirth"
+                    style="@style/txtInterbold16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="@string/lbl_date_of_birth" />
+
+                <EditText
+                    android:id="@+id/etDateOfBirth"
+                    style="@style/etRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8pxv"
+                    android:background="@drawable/rectangle_border_gray_800_23_radius_6"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:hint="date"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_13pxv"
+                    android:singleLine="true"
+                    android:textColorHint="@color/gray_800_01"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearColumnlocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_marginBottom="@dimen/_5pxv"
+                android:gravity="start"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/linearColumndateofbir">
+
+                <TextView
+                    android:id="@+id/txtLocation"
+                    style="@style/txtInterbold16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="@string/lbl_location" />
+
+                <EditText
+                    android:id="@+id/etLocation"
+                    style="@style/etRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8pxv"
+                    android:background="@drawable/rectangle_border_gray_800_23_radius_6"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:hint="address"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_13pxv"
+                    android:singleLine="true"
+                    android:textColorHint="@color/gray_800_01"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+        </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveChanges"
+        style="@style/btnGradientRounded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_77pxh"
+        android:layout_marginEnd="@dimen/_77pxh"
+        android:layout_marginBottom="@dimen/_30pxv"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingStart="@dimen/_30pxh"
+        android:paddingTop="@dimen/_10pxv"
+        android:paddingEnd="@dimen/_30pxh"
+        android:paddingBottom="@dimen/_10pxv"
+        android:singleLine="true"
+        android:text="@string/lbl_save_changes"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="@string/lbl_save_changes" />
+</androidx.constraintlayout.widget.ConstraintLayout>

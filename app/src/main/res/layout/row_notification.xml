@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearNotification"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtNotificationTex"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_1pxv"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            style="@style/txtInterregular14" tools:text="@string/msg_general_notification"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearRowstatustext"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_174pxh"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal" style="@style/groupStylecornerRadius">
+            <ImageView android:id="@+id/imageImageSource"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_width="@dimen/_20pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_ellipse_1"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_1"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtStatusText"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_2pxh"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                style="@style/txtDomitianlight10" tools:text="@string/lbl_off"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
