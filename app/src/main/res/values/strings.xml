@@ -71,5 +71,8 @@
     <string name="lbl_off">OFF</string>
     <string name="lbl_sound">Sound</string>
     <string name="msg_new_tips_available">New Tips Available</string>
-
+    <string name="msg_we_re_on_a_mission">"We're on a mission to make renting the new black, by providing seamless comfort with affordable pricing.&#13;
+&#13;
+With us, you can rent a wide range of well-conditioned vehicles, like, SUVs, MUVs, sedans, vintage cars and chariots at very affordable prices."</string>
+    <string name="msg_terms_conditions">Terms &amp; Conditions</string>
 </resources>
