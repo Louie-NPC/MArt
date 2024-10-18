@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/black">
 
     <ImageButton
@@ -13,19 +15,58 @@
         android:src="@drawable/arrow"/>
 
     <TextView
+        android:id="@+id/comment_title"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_toRightOf="@id/comment_button"
         android:text="Comments"
         android:textColor="#FFFFFF"
         android:textSize="32dp"
-        android:fontFamily="@font/abel_regular"/>
+        android:fontFamily="@font/abel_regular"
+        tools:ignore="InvalidId" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/comment_recycler"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/comment_button" />
+
+        android:layout_below="@id/comment_title" />
 
 
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/comment_text"
+            android:layout_width="330dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:hint="if I snap my fingers, you'll forget you were ever gay"
+            android:textColorHint="@color/gray"
+            tools:ignore="InvalidId,MissingConstraints" />
+
+        <Button
+            android:id="@+id/comment_msg_push"
+            android:layout_width="67dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintVertical_bias="0.898"
+            android:text="Send"
+            tools:ignore="InvalidId,MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

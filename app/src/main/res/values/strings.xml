@@ -8,6 +8,9 @@
     </string>
 
     <string name="underlined_text"><u>https://youtu.be/Z3J_MCbwaJ0?feature=shared</u></string>
+    <string name="placeholder">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </string>
 
 
 </resources>
