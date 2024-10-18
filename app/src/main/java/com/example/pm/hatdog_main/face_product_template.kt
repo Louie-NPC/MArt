@@ -47,7 +47,12 @@ class face_product_template : AppCompatActivity() {
                 shareButtonDialog.setContentView(shareDialogView)
                 shareButtonDialog.show() // Display the second BottomSheetDialog
             }
-        }
+
+                commentButtonDialogButton?.setOnClickListener {
+                    val intent = Intent(this, CommentPageActivity::class.java)
+                    startActivity(intent)
+                }
+
 
         BackArrowProduct.setOnClickListener{ //back to homepage
             val intent = Intent(this, hatdog_home_page::class.java)
@@ -60,4 +65,4 @@ class face_product_template : AppCompatActivity() {
 
 
     }
-}
+}}
