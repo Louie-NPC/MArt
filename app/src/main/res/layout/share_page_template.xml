@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="414dp"
+        android:layout_height="554dp"
+        android:background="@drawable/overview_template_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp" />
+
+
+
+    <ImageButton
+        android:id="@+id/overview_button"
+        android:layout_width="295dp"
+        android:layout_height="76dp"
+        android:background="#00000000"
+        android:src="@drawable/overview_button"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <HorizontalScrollView
+        android:layout_width="381dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overview_button"
+        app:layout_constraintVertical_bias="0.46"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="1"
+            android:columnCount="7">
+
+            <ImageButton
+                android:id="@+id/share_chat"
+                android:layout_width="85dp"
+                android:layout_height="158dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/share_chat"/>
+
+            <ImageButton
+                android:id="@+id/share_telegram"
+                android:layout_width="85dp"
+                android:layout_height="158dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/share_telegram"/>
+
+            <ImageButton
+                android:id="@+id/share_twitter"
+                android:layout_width="85dp"
+                android:layout_height="158dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/share_twitter"/>
+
+            <ImageButton
+                android:id="@+id/share_whatsapp"
+                android:layout_width="85dp"
+                android:layout_height="158dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/share_whatsapp"/>
+
+            <ImageButton
+                android:id="@+id/share_email"
+                android:layout_width="85dp"
+                android:layout_height="158dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/share_email"/>
+
+            <ImageButton
+                android:id="@+id/share_instagram"
+                android:layout_width="85dp"
+                android:layout_height="158dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/share_instagram"/>
+
+            <ImageButton
+                android:id="@+id/share_messenger"
+                android:layout_width="85dp"
+                android:layout_height="158dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/share_messenger"/>
+
+
+        </GridLayout>
+
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="167dp"
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias=".3"
+        app:layout_constraintHorizontal_bias="0.15"
+        android:fontFamily="@font/abel_regular"
+        android:text="Share with"
+        android:textColor="#3D5A80"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <RelativeLayout
+        android:layout_width="353dp"
+        android:layout_height="84dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".7"
+        tools:layout_editor_absoluteY="482dp">
+
+        <TextView
+            android:id="@+id/share_link_text"
+            android:layout_width="191dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginEnd="77dp"
+            android:fontFamily="@font/abel_regular"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="Or share with link" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/share_link_text"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/share_link_bg" />
+
+        <TextView
+            android:id="@+id/gen_link_temp"
+            android:layout_width="258dp"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="68dp"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="@font/abel_regular"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:text="@string/underlined_text" />
+
+        <ImageView
+
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="286dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/share_link_button" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

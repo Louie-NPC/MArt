@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="25dp"/> <!-- Adjust the radius to get the curved effect -->
+
+            <stroke
+                android:width="2dp"
+                android:color="#3f3f3f"/> <!-- Border color, adjust as needed -->
+        </shape>
+    </item>
+    <item android:left="2dp" android:right="2dp" android:top="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="18dp"/> <!-- Adjust the radius to match the inner shape -->
+            <solid android:color="#2f2f2f"/> <!-- Background color of the button -->
+        </shape>
+    </item>
+</layer-list>

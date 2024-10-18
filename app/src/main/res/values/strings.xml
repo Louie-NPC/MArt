@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PM</string>
+    <string name="m_art">
+        M\u00c2\u00b7Art
+    </string>
+    <string name="title_baggy">
+\nTitle: \n\u00e2\u0080\u009cBaggy\u00e2\u0080\u009d Bag\n\nTags: \nBags, Woven, Handicrafts\n\nDescription:\nA woven bag whose depth is unknown\n\nStatus:\nFor Sale\n
+    </string>
+
+    <string name="underlined_text"><u>https://youtu.be/Z3J_MCbwaJ0?feature=shared</u></string>
+
+
+</resources>

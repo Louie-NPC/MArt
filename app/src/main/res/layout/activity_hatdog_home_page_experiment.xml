@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="16dp"
+    tools:context=".hatdog_main.hatdog_home_page">
+
+    <RelativeLayout
+        android:id="@+id/mart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="36dp"
+            android:src="@drawable/mart_title" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/search" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="375dp"
+        android:layout_height="524dp"
+        android:layout_below="@id/piqued"
+        android:orientation="vertical">
+
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="5"
+            android:columnCount="2"
+            android:orientation="vertical"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true">
+
+            <ImageButton
+                android:id="@+id/productOne"
+                android:layout_width="175dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/placeholder"
+                android:background="@drawable/button_background_home_page"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="start" />
+
+
+            <ImageButton
+                android:id="@+id/productTwo"
+                android:layout_width="175dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/placeholder"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="end" />
+
+            <ImageButton
+                android:id="@+id/productThree"
+                android:layout_width="175dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/placeholder"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_gravity="start" />
+
+            <ImageButton
+                android:id="@+id/productFour"
+                android:layout_width="175dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/placeholder"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_gravity="end" />
+
+            <ImageButton
+                android:id="@+id/productFive"
+                android:layout_width="175dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/placeholder"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_gravity="start" />
+
+            <ImageButton
+                android:id="@+id/productSix"
+                android:layout_width="175dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/placeholder"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_gravity="end" />
+
+            <ImageButton
+                android:id="@+id/productSeven"
+                android:layout_width="175dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/placeholder"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_gravity="start" />
+
+            <ImageButton
+                android:id="@+id/productEight"
+                android:layout_width="175dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/placeholder"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_gravity="end" />
+
+            <ImageButton
+                android:id="@+id/productNine"
+                android:layout_width="175dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/placeholder"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:layout_gravity="start" />
+
+            <ImageButton
+                android:id="@+id/productTen"
+                android:layout_width="175dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/placeholder"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:layout_gravity="end" />
+
+
+
+
+
+        </GridLayout>
+
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/piqued"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mart"
+        android:textColor="#979EA6"
+        android:textSize="20sp"
+        android:text="Piqued your interest?"
+        android:fontFamily="@font/abel_regular"/>
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="395dp"
+        android:layout_height="151dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="564dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        
+        app:srcCompat="@drawable/tab_bar" />
+
+    <ImageButton
+        android:id="@+id/category"
+        android:layout_width="122dp"
+        android:layout_height="81dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="628dp"
+        android:layout_marginEnd="270dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="38dp"
+        android:adjustViewBounds="false"
+
+        android:background="@android:color/black"
+        android:src="@drawable/category" />
+
+    <ImageButton
+        android:id="@+id/message"
+        android:layout_width="137dp"
+        android:layout_height="126dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="95dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="619dp"
+        android:layout_marginEnd="227dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="34dp"
+        android:adjustViewBounds="false"
+
+        android:background="@android:color/black"
+        android:src="@drawable/message" />
+
+    <ImageButton
+        android:id="@+id/notification"
+        android:layout_width="199dp"
+        android:layout_height="217dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="234dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="605dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        android:adjustViewBounds="false"
+
+        android:background="@android:color/black"
+        android:src="@drawable/notification" />
+
+    <ImageButton
+        android:id="@+id/user"
+        android:layout_width="161dp"
+        android:layout_height="165dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="289dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="618dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="28dp"
+        android:adjustViewBounds="false"
+
+        android:background="@android:color/black"
+        android:src="@drawable/user" />
+
+    <ImageButton
+        android:id="@+id/new_button"
+        android:layout_width="126dp"
+        android:layout_height="124dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="568dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="55dp"
+        android:adjustViewBounds="false"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/new_button" />
+
+
+</RelativeLayout>
+
