@@ -23,6 +23,7 @@ annotation = "1.8.2"
 googleGmsGoogleServices = "4.4.2"
 firebaseAuth = "23.0.0"
 firebaseMessaging = "24.0.2"
+firebaseDatabaseKtx = "21.0.0"
 
 [libraries]
 android-otpview-pinview = { module = "com.github.mukeshsolanki:android-otpview-pinview", version.ref = "androidOtpviewPinview" }
@@ -47,6 +48,7 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+firebase-database-ktx = { group = "com.google.firebase", name = "firebase-database-ktx", version.ref = "firebaseDatabaseKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

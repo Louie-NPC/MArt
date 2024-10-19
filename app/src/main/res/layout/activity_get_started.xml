@@ -21,11 +21,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
+
         <ImageView
             android:id="@+id/imageImagethirteen"
             android:layout_width="375dp"
             android:layout_height="236dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="120dp"
             android:gravity="center_horizontal"
             android:scaleType="fitXY"
             android:src="@drawable/img_image_13"
@@ -33,7 +34,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
-
 
         <TextView
             android:id="@+id/txtCaptivating"
