@@ -239,7 +239,7 @@
         app:layout_constraintVertical_bias=".86"
         android:layout_alignParentTop="true"
         tools:layout_editor_absoluteY="577dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"> <!-- This part is clickable (for profile redirection) -->
 
         <ImageView
             android:id="@+id/prof_pic"
