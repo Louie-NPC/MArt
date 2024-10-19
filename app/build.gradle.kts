@@ -60,6 +60,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
         implementation (libs.pinview)
     implementation (libs.material.v130alpha03)
+    implementation (libs.androidx.recyclerview)
+    implementation (libs.androidx.recyclerview.selection)
+
 
 
 }

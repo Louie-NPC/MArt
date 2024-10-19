@@ -20,6 +20,9 @@
     <color name="blue_gray_100">#d9d9d9</color>
     <color name="icon_selected_color">#FF0000</color>  <!-- Example: Red for selected -->
     <color name="icon_unselected_color">#00FF00</color>  <!-- Example: Green for unselected -->
+    <color name="blue_gray_400">#888888</color>
+    <color name="gray_900">#202020</color>
+    <color name="indigo_50">#e2e8f0</color>
 
 
 </resources>

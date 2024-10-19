@@ -1,60 +1,74 @@
 package com.example.martapplication
 
 import android.os.Bundle
-import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.martapplication.fragment.HomeFragment
 import com.example.martapplication.fragment.MessagesFragment
 import com.example.martapplication.fragment.NotificationFragment
 import com.example.martapplication.fragment.ProfileFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.widget.ImageView
 
-class MainActivity : AppCompatActivity(),BottomNavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    lateinit var bottomNavigationView:BottomNavigationView
+    // ImageView variables
+    private lateinit var categoryImageView: ImageView
+    private lateinit var messagesImageView: ImageView
+    private lateinit var notificationImageView: ImageView
+    private lateinit var profileImageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Hide the action bar title
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
+        // Initialize ImageView click listeners for fragment navigation
+        categoryImageView = findViewById(R.id.category)
+        messagesImageView = findViewById(R.id.messages)
+        notificationImageView = findViewById(R.id.notification)
+        profileImageView = findViewById(R.id.profile)
 
+        // Set click listeners for each ImageView
+        categoryImageView.setOnClickListener(this)
+        messagesImageView.setOnClickListener(this)
+        notificationImageView.setOnClickListener(this)
+        profileImageView.setOnClickListener(this)
 
-
-        bottomNavigationView = findViewById(R.id.bottomNavigationView)
-        bottomNavigationView.setOnNavigationItemSelectedListener(this)
-
-        supportFragmentManager.beginTransaction().replace(R.id.nav_fragment, HomeFragment()).commit()
+        // Load the HomeFragment by default when the activity starts
+        if (savedInstanceState == null) {
+            loadFragment(HomeFragment(), "homeFragment")
+        }
     }
 
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.homeFragment -> {
-                val fragment = HomeFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.nav_fragment, fragment, fragment.javaClass.simpleName)
-                    .commit()
-                return true
-            }
-            R.id.messagesFragment -> {
-                val fragment = MessagesFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.nav_fragment, fragment, fragment.javaClass.simpleName)
-                    .commit()
-                return true
-            }
-            R.id.notificationFragment -> {
-                val fragment = NotificationFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.nav_fragment, fragment, fragment.javaClass.simpleName)
-                    .commit()
-                return true
-            }
-            R.id.profileFragment -> {
-                val fragment = ProfileFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.nav_fragment, fragment, fragment.javaClass.simpleName)
-                    .commit()
-                return true
-            }
+    // Handle image click events
+    override fun onClick(v: View?) {
+        val fragment = when (v?.id) {
+            R.id.category -> HomeFragment()
+            R.id.messages -> MessagesFragment()
+            R.id.notification -> NotificationFragment()
+            R.id.profile -> ProfileFragment()
+            else -> null
         }
-        return false
+
+        val tag = when (v?.id) {
+            R.id.category -> "homeFragment"
+            R.id.messages -> "messagesFragment"
+            R.id.notification -> "notificationFragment"
+            R.id.profile -> "profileFragment"
+            else -> null
+        }
+
+        if (fragment != null && tag != null) {
+            loadFragment(fragment, tag)
+        }
+    }
+
+    // Function to load a fragment and replace the current one
+    private fun loadFragment(fragment: androidx.fragment.app.Fragment, tag: String) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.nav_fragment, fragment, tag)
+            .commit()
     }
 }

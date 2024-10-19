@@ -38,4 +38,6 @@
     <string name="lbl_m_art">M·Art</string>
     <string name="todo">TODO</string>
     <string name="m_art">M-Art</string>
+    <string name="lbl_search">Search</string>
+    <string name="profile_image">Profile Image</string>
 </resources>
