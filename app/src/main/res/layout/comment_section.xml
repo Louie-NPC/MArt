@@ -30,7 +30,6 @@
         android:id="@+id/comment_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_below="@id/comment_title" />
 
 
@@ -57,15 +56,17 @@
 
         <Button
             android:id="@+id/comment_msg_push"
-            android:layout_width="67dp"
-            android:layout_height="40dp"
+            android:layout_width="83dp"
+            android:layout_height="39dp"
+            android:background="@drawable/rounded_gray"
+            android:text="Send"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.955"
-            app:layout_constraintVertical_bias="0.898"
-            android:text="Send"
+            app:layout_constraintVertical_bias="1.0"
             tools:ignore="InvalidId,MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

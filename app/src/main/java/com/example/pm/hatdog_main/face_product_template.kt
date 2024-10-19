@@ -59,10 +59,4 @@ class face_product_template : AppCompatActivity() {
             startActivity(intent)
 
         }
-
-
-
-
-
-    }
-}}
+        }}}
