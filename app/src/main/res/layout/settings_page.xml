@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
-    <LinearLayout android:id="@+id/linearColumnmaterialSymbolOne"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/linearColumnmaterialSymbolOne"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="vertical" style="@style/groupStyleblack_900">
@@ -9,7 +14,7 @@
             android:gravity="center_horizontal"
             android:id="@+id/toolbarToolbar"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_28pxv"
+
             android:layout_width="match_parent" app:contentInsetStart="0dp">
             <LinearLayout android:id="@+id/linearRowmaterialsymb"
                 android:layout_height="wrap_content"
@@ -58,7 +63,7 @@
                     style="@style/txtIntersemibold16" tools:text="@string/lbl_account"/>
 
                 <LinearLayout
-                    android:id="@+id/linearColumnmaterials"
+                    android:id="@+id/Security"
                     style="@style/groupStylegray_800cornerRadius"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,15 +79,16 @@
                         android:id="@+id/linearRowmaterialsymb1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:clickable="true">
 
                         <ImageView
                             android:id="@+id/imageMaterialsymbol1"
                             android:layout_width="@dimen/_30pxh"
                             android:layout_height="@dimen/_30pxh"
-                            android:layout_gravity="center_vertical"
+                            android:layout_gravity="bottom"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_material_symbol_white_a700"
+                            android:background="@drawable/img_material_symbol_white_a700"
                             tools:ignore="ContentDescription"
                             tools:src="@drawable/img_material_symbol_white_a700" />
 
@@ -102,11 +108,12 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/linearRowiconamoon"
+                        android:id="@+id/Notification"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_9pxv"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:clickable="true">
 
                         <ImageView
                             android:id="@+id/imageIconamoonOne"
@@ -114,7 +121,7 @@
                             android:layout_height="@dimen/_30pxh"
                             android:layout_gravity="center_vertical"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_iconamoon_notification"
+                            android:background="@drawable/img_iconamoon_notification"
                             tools:ignore="ContentDescription"
                             tools:src="@drawable/img_iconamoon_notification" />
 
@@ -133,37 +140,37 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/linearRowicoutlineloc"
+                        android:id="@+id/Privacy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_9pxv"
-                        android:orientation="horizontal">
-
+                        android:orientation="horizontal"
+                        android:clickable="true">
                         <ImageView
                             android:id="@+id/imageIcoutlinelock"
                             android:layout_width="@dimen/_30pxh"
                             android:layout_height="@dimen/_30pxh"
                             android:layout_gravity="center_vertical"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_ic_outline_lock"
+                            android:background="@drawable/img_ic_outline_lock"
                             tools:ignore="ContentDescription"
                             tools:src="@drawable/img_ic_outline_lock" />
-
                         <TextView
                             android:id="@+id/txtPrivacy"
                             style="@style/txtIntersemibold16"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
                             android:layout_marginStart="@dimen/_32pxh"
-                            android:layout_marginTop="@dimen/_6pxv"
-                            android:layout_marginBottom="@dimen/_3pxv"
                             android:ellipsize="end"
+                            android:gravity="center_vertical"
                             android:singleLine="true"
                             tools:text="@string/lbl_privacy" />
                     </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout android:gravity="start"
                 android:id="@+id/linearColumnsupportab"
                 android:layout_height="wrap_content"
@@ -188,17 +195,20 @@
                     android:paddingStart="@dimen/_23pxh"
                     android:paddingTop="@dimen/_12pxv" style="@style/groupStylegray_800cornerRadius">
                     <LinearLayout
-                        android:id="@+id/linearRowmaterialsymb2"
+                        android:id="@+id/MySubscription"
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="true">
                         <ImageView
                             android:id="@+id/imageMaterialsymbol2"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="@dimen/_30pxh"
                             android:layout_width="@dimen/_30pxh"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_material_symbol_white_a700_30x30"
-                            tools:ignore="ContentDescription" tools:src="@drawable/img_material_symbol_white_a700_30x30"/>
+                            android:background="@drawable/img_material_symbol_white_a700_30x30"
+                            tools:ignore="ContentDescription"
+                            tools:src="@drawable/img_material_symbol_white_a700_30x30" />
                         <TextView android:ellipsize="end"
                             android:gravity="bottom"
                             android:id="@+id/txtMysubscribtion"
@@ -212,16 +222,18 @@
                             style="@style/txtIntersemibold16" tools:text="@string/lbl_my_subscribtion"/>
                     </LinearLayout>
                     <LinearLayout
-                        android:id="@+id/linearRowmdiquestionm"
+                        android:id="@+id/HelpANDSupport"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_9pxv"
-                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="true"    >
                         <ImageView android:id="@+id/imageMdiquestionma"
                             android:layout_gravity="center_vertical"
                             android:layout_height="@dimen/_30pxh"
                             android:layout_width="@dimen/_30pxh"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_mdi_question_ma"
+                            android:background="@drawable/img_mdi_question_ma"
                             tools:ignore="ContentDescription" tools:src="@drawable/img_mdi_question_ma"/>
                         <TextView android:ellipsize="end"
                             android:gravity="bottom"
@@ -232,20 +244,22 @@
                             android:layout_marginTop="@dimen/_6pxv"
                             android:layout_width="match_parent"
                             android:singleLine="true"
-
                             style="@style/txtIntersemibold16" tools:text="@string/lbl_help_support"/>
                     </LinearLayout>
-                    <LinearLayout android:id="@+id/linearRowtermsand"
+
+                    <LinearLayout android:id="@+id/TermsANDPolicies"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_88pxh"
                         android:layout_marginTop="@dimen/_9pxv"
-                        android:layout_width="match_parent" android:orientation="horizontal">
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:clickable="true">
                         <ImageView android:id="@+id/imageImage"
                             android:layout_gravity="center_vertical"
                             android:layout_height="@dimen/_30pxh"
                             android:layout_width="@dimen/_30pxh"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_tabler_circle_letter_i"
+                            android:background="@drawable/img_tabler_circle_letter_i"
                             tools:ignore="ContentDescription" tools:src="@drawable/img_tabler_circle_letter_i"/>
                         <TextView android:ellipsize="end"
                             android:gravity="center_vertical"
@@ -259,8 +273,10 @@
 
                             style="@style/txtIntersemibold16" tools:text="@string/msg_terms_and_policies"/>
                     </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout android:gravity="start"
                 android:id="@+id/linearColumncachecell"
                 android:layout_height="wrap_content"
@@ -287,16 +303,18 @@
                     android:paddingTop="@dimen/_12pxv" style="@style/groupStylegray_800cornerRadius">
 
                     <LinearLayout
-                        android:id="@+id/linearRowrideletebinf"
+                        android:id="@+id/FreeUpSpace"
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="true">
                         <ImageView
                             android:id="@+id/imageRideletebinfive"
                             android:layout_gravity="center_vertical"
                             android:layout_height="@dimen/_30pxh"
                             android:layout_width="@dimen/_30pxh"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_ri_delete_bin_5_line"
+                            android:background="@drawable/img_ri_delete_bin_5_line"
                             tools:ignore="ContentDescription" tools:src="@drawable/img_ri_delete_bin_5_line"/>
                         <TextView android:alpha="0.9"
                             android:ellipsize="end"
@@ -313,16 +331,18 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/linearRowicoutlinedat"
+                        android:id="@+id/DataSaver"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_9pxv"
-                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="true">
                         <ImageView android:id="@+id/imageIcoutlinedata"
                             android:layout_gravity="center_vertical"
                             android:layout_height="@dimen/_30pxh"
                             android:layout_width="@dimen/_30pxh"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_ic_outline_data_exploration"
+                            android:background="@drawable/img_ic_outline_data_exploration"
                             tools:ignore="ContentDescription" tools:src="@drawable/img_ic_outline_data_exploration"/>
                         <TextView android:alpha="0.9"
                             android:ellipsize="end"
@@ -339,6 +359,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout android:gravity="start"
                 android:id="@+id/linearColumnactions"
                 android:layout_height="wrap_content"
@@ -364,15 +385,17 @@
                     android:paddingEnd="@dimen/_24pxh"
                     android:paddingStart="@dimen/_24pxh"
                     android:paddingTop="@dimen/_32pxv" style="@style/groupStylegray_800cornerRadius">
-                    <LinearLayout android:id="@+id/linearRowicsharpOne"
+                    <LinearLayout android:id="@+id/ReportAProblem"
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="true">
                         <ImageView android:id="@+id/imageIcsharpOne"
                             android:layout_gravity="center_vertical"
                             android:layout_height="@dimen/_30pxh"
                             android:layout_width="@dimen/_30pxh"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_ic_sharp_outlined_flag"
+                            android:background="@drawable/img_ic_sharp_outlined_flag"
                             tools:ignore="ContentDescription" tools:src="@drawable/img_ic_sharp_outlined_flag"/>
                         <TextView android:ellipsize="end"
                             android:gravity="bottom"
@@ -386,31 +409,34 @@
 
                             style="@style/txtIntersemibold16" tools:text="@string/msg_report_a_problem"/>
                     </LinearLayout>
-                    <LinearLayout android:id="@+id/linearRowmdilogout"
+
+                    <LinearLayout android:id="@+id/LogOut"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_9pxv"
-                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="true">
                         <ImageView android:id="@+id/imageMdilogoutOne"
                             android:layout_gravity="center_vertical"
                             android:layout_height="@dimen/_30pxh"
                             android:layout_width="@dimen/_30pxh"
                             android:scaleType="fitXY"
-                            android:src="@drawable/img_mdi_logout"
+                            android:background="@drawable/img_mdi_logout"
                             tools:ignore="ContentDescription" tools:src="@drawable/img_mdi_logout"/>
-                        <TextView android:ellipsize="end"
-                            android:id="@+id/txtLogout"
-                            android:layout_gravity="bottom"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_3pxv"
-                            android:layout_marginStart="@dimen/_32pxh"
-                            android:layout_marginTop="@dimen/_6pxv"
-                            android:layout_width="wrap_content"
-                            android:singleLine="true"
 
-                            style="@style/txtIntersemibold16" tools:text="@string/lbl_log_out"/>
+                        <TextView
+                            android:id="@+id/txtLogout"
+                            style="@style/txtIntersemibold16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_32pxh"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            tools:text="@string/lbl_log_out" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</layout>
+</androidx.constraintlayout.widget.ConstraintLayout>

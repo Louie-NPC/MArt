@@ -49,16 +49,15 @@
                             tools:ignore="ContentDescription"
                             tools:src="@drawable/img_arrow"/>
 
-                        <ImageView
-                            android:id="@+id/imageIconsOne"
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSettings"
                             android:layout_width="@dimen/_25pxh"
                             android:layout_height="@dimen/_25pxh"
                             android:layout_gravity="bottom"
                             android:layout_marginStart="@dimen/_320pxh"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/img_icons"
-                            tools:ignore="ContentDescription"
-                            tools:src="@drawable/img_icons" />
+                            android:background="@drawable/img_icons"
+                            android:visibility="visible"
+                            tools:ignore="ContentDescription" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>
