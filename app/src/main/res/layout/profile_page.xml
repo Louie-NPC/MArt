@@ -8,7 +8,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout android:id="@+id/linearFinalProfile"
             android:layout_width="match_parent"
@@ -256,6 +257,7 @@
                         style="@style/btnGradientRounded2"
                         android:layout_width="@dimen/_100sp"
                         android:layout_height="@dimen/_20pxh"
+                        android:layout_marginStart="4dp"
                         android:gravity="center"
                         android:text="@string/lbl_edit_profile"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -277,9 +279,6 @@
                         app:layout_constraintTop_toTopOf="parent"
                         tools:text="@string/lbl_upload" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:gravity="center_vertical"
@@ -332,17 +331,20 @@
                     android:layout_height="@dimen/_1pxv"
                     android:layout_marginEnd="@dimen/_8pxh"
                     android:layout_marginStart="@dimen/_9pxh" android:layout_width="@dimen/_327pxh"/>
+
                 <androidx.recyclerview.widget.RecyclerView
-                    android:gravity="center_horizontal"
                     android:id="@+id/recyclerFinalProfile"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_1pxh"
                     android:layout_marginTop="@dimen/_6pxv"
-                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:spanCount="3"
-                    tools:itemCount="5" tools:listitem="@layout/row_profile"/>
+                    tools:itemCount="5"
+                    tools:listitem="@layout/active_posts" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,5 +17,8 @@
     <color name="gray_800_23">#23534c4c</color>
     <color name="gray_800_01">#534c4c</color>
     <color name="gray_400">#cac4c4</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="red_600_01">#E53935</color>
+    <color name="indigo_a400">#3F51B5</color>
 </resources>
 
