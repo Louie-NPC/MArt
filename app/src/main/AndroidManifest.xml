@@ -12,11 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalEditProfile"
         tools:targetApi="31">
+        <activity android:name=".profile_main.EditProfileActivity"
+            android:theme="@style/Theme.AppCompat"
+            android:exported="false"/>
+        <activity android:name=".profile_main.SettingsPage"
+            android:theme="@style/Theme.AppCompat"
+            android:exported="false"/>
+        <activity android:name=".profile_main.PrivacyPolicyPage"
+            android:theme="@style/Theme.AppCompat"
+            android:exported="false"/>
+        <activity android:name=".profile_main.NotificationPage"
+            android:theme="@style/Theme.AppCompat"
+            android:exported="false"/>
+        <activity android:name=".profile_main.TermsANDCondidtionPage"
+            android:theme="@style/Theme.AppCompat"
+            android:exported="false"/>
         <activity
             android:name=".profile_main.ProfilePage"
             android:exported="true"
             android:label="MArt"
-            android:theme="@style/Theme.FinalEditProfile">
+            android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
