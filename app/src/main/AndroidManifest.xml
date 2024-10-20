@@ -13,9 +13,13 @@
         android:theme="@style/Theme.PM"
         tools:targetApi="31">
         <activity
+            android:name=".hatdog_main.ProductPage"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity
             android:name=".hatdog_main.CommentPageActivity"
-            android:theme="@style/Theme.AppCompat"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".hatdog_main.SharePageActivity"
             android:exported="false"

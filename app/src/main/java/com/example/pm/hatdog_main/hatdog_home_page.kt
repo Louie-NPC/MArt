@@ -15,7 +15,7 @@ class hatdog_home_page : AppCompatActivity() {
     private lateinit var productTwoButton: AppCompatImageButton
     private lateinit var productThreeButton: AppCompatImageButton
     private lateinit var productFourButton: AppCompatImageButton
-    private lateinit var productFiveButton: AppCompatImageButton
+    private lateinit var productNewButton: AppCompatImageButton
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +30,7 @@ class hatdog_home_page : AppCompatActivity() {
         productTwoButton = findViewById<AppCompatImageButton>(R.id.productTwo)
         productThreeButton = findViewById<AppCompatImageButton>(R.id.productThree)
         productFourButton = findViewById<AppCompatImageButton>(R.id.productFour)
-        productFiveButton = findViewById<AppCompatImageButton>(R.id.productFive)
+        productNewButton = findViewById<AppCompatImageButton>(R.id.new_button)
 
 
         productOneButton.setOnClickListener{
@@ -52,8 +52,8 @@ class hatdog_home_page : AppCompatActivity() {
             startActivity(intent)
 
         }
-        productFiveButton.setOnClickListener{
-            val intent = Intent(this, face_product_template::class.java)
+        productNewButton.setOnClickListener{
+            val intent = Intent(this, ProductPage::class.java)
             startActivity(intent)
 
         }

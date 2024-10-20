@@ -26,6 +26,12 @@ class face_product_template : AppCompatActivity() {
         OverviewButton = findViewById<AppCompatImageButton>(R.id.overview_button)
         BackArrowProduct = findViewById<AppCompatImageButton>(R.id.back_arrow_product)
 
+        BackArrowProduct.setOnClickListener{ //back to homepage
+            val intent = Intent(this, hatdog_home_page::class.java)
+            startActivity(intent)
+
+        }
+
         OverviewButton.setOnClickListener {
             // First BottomSheetDialog (Overview)
             val bottomSheetDialog = BottomSheetDialog(this)
@@ -54,9 +60,5 @@ class face_product_template : AppCompatActivity() {
                 }
 
 
-        BackArrowProduct.setOnClickListener{ //back to homepage
-            val intent = Intent(this, hatdog_home_page::class.java)
-            startActivity(intent)
 
-        }
         }}}
