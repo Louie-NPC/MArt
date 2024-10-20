@@ -4,9 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.martapplication.fragment.HomeFragment
-import com.example.martapplication.fragment.MessagesFragment
 import com.example.martapplication.fragment.NotificationFragment
 import com.example.martapplication.fragment.ProfileFragment
+import com.example.martapplication.fragment.ChatFragment
+import com.example.martapplication.fragment.ChatFromHomeFragment
 import android.widget.ImageView
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         val fragment = when (v?.id) {
             R.id.category -> HomeFragment()
-            R.id.messages -> MessagesFragment()
+            R.id.messages -> ChatFromHomeFragment()
             R.id.notification -> NotificationFragment()
             R.id.profile -> ProfileFragment()
             else -> null
@@ -64,6 +65,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             loadFragment(fragment, tag)
         }
     }
+
 
     // Function to load a fragment and replace the current one
     private fun loadFragment(fragment: androidx.fragment.app.Fragment, tag: String) {

@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -55,13 +57,21 @@ dependencies {
     implementation(libs.androidx.annotation)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.messaging)
+    implementation(libs.firebase.firestore.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-        implementation (libs.pinview)
+    implementation (libs.pinview)
     implementation (libs.material.v130alpha03)
     implementation (libs.androidx.recyclerview)
     implementation (libs.androidx.recyclerview.selection)
+    implementation (libs.circleimageview)
+    implementation (libs.glide)
+    implementation (libs.okhttp)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+
+
 
 
 
