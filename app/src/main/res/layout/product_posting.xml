@@ -76,7 +76,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/placeholder"
+            android:hint="@string/placeholder"
+            android:textColorHint="@color/gray"
             android:textColor="@color/white"
             android:background="@android:color/transparent"/>
     </ScrollView>
@@ -98,13 +99,15 @@
             android:text="Add title"
 
             android:textColor="@color/white"
-            android:gravity="center"/>
+            android:gravity="center"
+            tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/edit_title_desc"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="rawr"
+            android:hint="rawr"
+            android:textColorHint="@color/gray"
             android:textColor="@color/white"
 
             app:layout_constraintStart_toEndOf="@id/title_desc_head"
@@ -132,7 +135,8 @@
             android:text="Size"
 
             android:textColor="@color/white"
-            android:gravity="center"/>
+            android:gravity="center"
+            tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/small_button"
@@ -207,7 +211,8 @@
             android:id="@+id/edit_status_desc"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="rawr"
+            android:hint="rawr"
+            android:textColorHint="@color/gray"
             android:textColor="@color/white"
 
             app:layout_constraintStart_toEndOf="@id/status_desc_head"
@@ -242,7 +247,8 @@
             android:id="@+id/edit_tags_desc"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="rawr"
+            android:hint="rawr"
+            android:textColorHint="@color/gray"
             android:textColor="@color/white"
 
             app:layout_constraintStart_toEndOf="@id/tag_desc_head"

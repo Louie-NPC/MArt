@@ -20,7 +20,6 @@
         tools:layout_editor_absoluteX="1dp" />
 
 
-
     <ImageButton
         android:id="@+id/overview_button"
         android:layout_width="295dp"
@@ -28,10 +27,10 @@
         android:background="#00000000"
         android:src="@drawable/overview_button"
 
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        tools:ignore="ContentDescription,MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription,MissingConstraints"
+        tools:layout_editor_absoluteY="141dp" />
 
     <HorizontalScrollView
         android:layout_width="381dp"
