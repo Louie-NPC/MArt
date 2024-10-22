@@ -139,12 +139,14 @@
             style="@style/txtIntersemibold18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="484dp"
+            android:layout_marginBottom="448dp"
             android:text="@string/lbl_support_about"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.147"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView44"
+            app:layout_constraintVertical_bias="0.987" />
 
         <TextView
             android:id="@+id/textView50"
@@ -153,6 +155,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:text="@string/lbl_account"
+            app:layout_constraintBottom_toTopOf="@+id/layOutConstraint2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.114"
             app:layout_constraintStart_toStartOf="parent"
@@ -165,10 +168,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/msg_cache_cellular"
+            app:layout_constraintBottom_toTopOf="@+id/layOutConstraint6"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintHorizontal_bias="0.143"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layOutConstraint4" />
+            app:layout_constraintTop_toBottomOf="@+id/layOutConstraint4"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/textView58"
@@ -192,8 +197,10 @@
             android:background="#544C4C"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layOutConstraint6"
+            app:layout_constraintVertical_bias="1.0">
 
             <ImageView
                 android:id="@+id/reportProblem"
@@ -323,10 +330,10 @@
             android:background="#544C4C"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.73">
+            app:layout_constraintVertical_bias="0.729">
 
             <ImageView
                 android:id="@+id/dataSaverIcon"

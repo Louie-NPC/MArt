@@ -71,5 +71,9 @@
     <string name="lbl_add_title">Add Title</string>
     <string name="msg_portrait_painting">Portrait, Painting</string>
     <string name="lbl_size">Size</string>
+    <string name="underlined_text"><u>https://youtu.be/Z3J_MCbwaJ0?feature=shared</u></string>
+    <string name="placeholder">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </string>
     <string name="lbl_large">Large</string>
 </resources>

@@ -41,6 +41,7 @@ class ProductAdapter(
                 else -> Log.e("ProductAdapter", "Unknown image type: $image")
             }
 
+            // Handle product item click
             binding.root.setOnClickListener {
                 val context = binding.root.context
                 val intent = Intent(context, ProductOverviewActivity::class.java)
