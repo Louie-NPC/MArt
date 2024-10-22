@@ -55,6 +55,9 @@ dependencies {
     implementation(libs.androidx.annotation)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.messaging)
+    implementation(libs.play.services.maps)
+    implementation(libs.androidx.glance)
+    implementation(libs.play.services.cast.framework)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -62,6 +65,19 @@ dependencies {
     implementation (libs.material.v130alpha03)
     implementation (libs.androidx.recyclerview)
     implementation (libs.androidx.recyclerview.selection)
+    implementation (libs.glide)
+    implementation(libs.imagepicker)
+    implementation (libs.dhaval2404.imagepicker)
+    implementation (libs.imagepicker.v2112)
+    implementation (libs.firebase.database)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.database.ktx)
+    implementation(libs.firebase.appcheck.playintegrity)
+    implementation (libs.kotlinx.coroutines.android)
+
+
+
+
 
 
 

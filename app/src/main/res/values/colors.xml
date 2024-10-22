@@ -23,6 +23,12 @@
     <color name="blue_gray_400">#888888</color>
     <color name="gray_900">#202020</color>
     <color name="indigo_50">#e2e8f0</color>
+    <color name="indigo_A400">#4f4bfd</color>
+    <color name="red_600_01">#ef2b2b</color>
+    <color name="white_A700_ab">#abffffff</color>
+    <color name="blue_A200">#4192ef</color>
+    <color name="light_blue_800">#0071ce</color>
+    <color name="blue_gray_900">#363636</color>
 
 
 </resources>

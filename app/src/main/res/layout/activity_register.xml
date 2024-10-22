@@ -14,8 +14,12 @@
             style="@style/groupStyleblack_900"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp">
+            app:layout_constraintVertical_bias="0.0">
 
             <ImageView
                 android:id="@+id/imageImagethirteen"
@@ -25,7 +29,6 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/img_image_13"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="ContentDescription"
@@ -39,17 +42,19 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/rectangle_border_gray_500_radius_15"
                 android:ellipsize="end"
+                android:gravity="start"
                 android:hint="@string/msg_enter_your_email_add"
                 android:inputType="textEmailAddress"
                 android:paddingStart="@dimen/_24pxh"
                 android:paddingTop="@dimen/_16pxv"
                 android:paddingEnd="@dimen/_24pxh"
-                android:paddingBottom="@dimen/_16pxv"
+                android:paddingBottom="5dp"
                 android:singleLine="true"
                 android:textColorHint="@color/gray_600"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
+                tools:gravity="start"
                 tools:ignore="Autofill" />
 
             <EditText
@@ -67,10 +72,12 @@
                 android:paddingStart="@dimen/_28pxh"
                 android:paddingTop="@dimen/_16pxv"
                 android:paddingEnd="@dimen/_16pxh"
-                android:paddingBottom="@dimen/_16pxv"
+                android:paddingBottom="5dp"
                 android:singleLine="true"
                 android:textColorHint="@color/gray_600"
+                android:gravity="start"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
                 tools:ignore="Autofill" />

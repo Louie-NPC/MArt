@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductPosting">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearProductPosting"
+        style="@style/groupStyleblack_900"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <ImageView
+            android:id="@+id/imageArrowleftOne"
+            android:layout_width="29dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="36dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_arrow" />
+
+        <TextView
+            android:id="@+id/txtNewpost"
+            style="@style/txtSFProTextbold17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="35dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/lbl_new_post"
+            app:layout_constraintStart_toEndOf="@+id/imageArrowleftOne"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/lbl_new_post" />
+
+        <TextView
+            android:id="@+id/txtPost"
+            style="@style/txtPoppinsbold17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="28dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/lbl_post"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/txtNewpost"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/lbl_post" />
+
+
+        <ImageView
+            android:id="@+id/productFromGallery"
+            android:layout_width="294dp"
+            android:layout_height="222dp"
+            android:layout_marginTop="28dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/lineDividerFive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerThree"
+            app:layout_constraintVertical_bias="0.045"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_image" />
+
+        <View
+            android:id="@+id/lineDividerThree"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="72dp"
+            android:background="@color/gray_900"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.634"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtNewpost" />
+
+        <View
+            android:id="@+id/lineDividerFive"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="376dp"
+            android:background="@color/gray_900"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerThree" />
+
+        <TextView
+            android:id="@+id/txtAddtitle"
+            style="@style/txtPoppinsregular15_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/lbl_add_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerFive"
+            tools:text="@string/lbl_add_title" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtAbstract"
+            android:layout_width="138dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.402"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bioEditText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtAbstractInput"
+                android:layout_width="134dp"
+                android:layout_height="27dp"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/lineDividerSeven"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="44dp"
+            android:background="@color/gray_900"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerFive" />
+
+        <TextView
+            android:id="@+id/txtSize"
+            style="@style/txtPoppinsregular15_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/lbl_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerSeven"
+            tools:text="@string/lbl_size" />
+
+        <TextView
+            android:id="@+id/txtSmall"
+            style="@style/txtSolidRounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:paddingStart="@dimen/_5pxh"
+            android:paddingTop="@dimen/_4pxv"
+            android:paddingEnd="@dimen/_5pxh"
+            android:paddingBottom="@dimen/_4pxv"
+            android:singleLine="true"
+            android:text="@string/lbl_small"
+            app:layout_constraintStart_toEndOf="@+id/txtSize"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerSeven"
+            tools:text="@string/lbl_small" />
+
+        <TextView
+            android:id="@+id/txtMedium"
+            style="@style/txtSolidRounded"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:paddingStart="@dimen/_5pxh"
+            android:paddingTop="@dimen/_4pxv"
+            android:paddingEnd="@dimen/_5pxh"
+            android:paddingBottom="@dimen/_4pxv"
+            android:singleLine="true"
+            android:text="@string/lbl_medium"
+            app:layout_constraintStart_toEndOf="@+id/txtSmall"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerSeven"
+            tools:text="@string/lbl_medium" />
+
+        <TextView
+            android:id="@+id/txtLarge"
+            style="@style/txtSolidRounded"
+            android:layout_width="63dp"
+            android:gravity="center"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:paddingStart="@dimen/_5pxh"
+            android:paddingTop="@dimen/_2pxv"
+            android:paddingEnd="@dimen/_5pxh"
+            android:paddingBottom="@dimen/_2pxv"
+            android:singleLine="true"
+            android:text="@string/lbl_large"
+            app:layout_constraintStart_toEndOf="@+id/txtMedium"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerSeven"
+            tools:text="@string/lbl_large" />
+
+        <TextView
+            android:id="@+id/txtExtraLarge"
+            style="@style/txtSolidRounded_1"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:ellipsize="end"
+            android:paddingStart="@dimen/_5pxh"
+            android:paddingTop="@dimen/_2pxv"
+            android:paddingEnd="@dimen/_5pxh"
+            android:paddingBottom="@dimen/_2pxv"
+            android:singleLine="true"
+            android:text="@string/lbl_extra_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/txtLarge"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerSeven"
+            tools:text="@string/lbl_extra_large" />
+
+        <View
+            android:id="@+id/lineDividerNine"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/gray_900"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerSeven" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            style="@style/txtPoppinsregular15_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/lbl_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerNine"
+            tools:text="@string/lbl_status" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtForsale"
+            android:layout_width="126dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="88dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAbstract">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtForsaleInput"
+                android:layout_width="126dp"
+                android:layout_height="35dp"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/lineDividerEleven"
+            android:layout_width="wrap_content"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/gray_900"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productFromGallery" />
+
+        <TextView
+            android:id="@+id/txtAddtags"
+            style="@style/txtPoppinsregular15_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/lbl_add_tags"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineDivider"
+            tools:text="@string/lbl_add_tags" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtPortrait"
+            android:layout_width="292dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.89"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtForsale">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPortraitInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/lineDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/gray_900"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerNine" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/bioEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerEleven"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bioEditTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:inputType="textMultiLine"
+                android:lines="3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView61"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Product Description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineDividerEleven" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,6 +33,7 @@
                         android:fontFamily="@font/anton"
                         android:padding="16dp"
                         android:text="M-Art"
+                        android:textColor="@color/white"
                         android:textSize="40sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +76,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
-                tools:itemCount="20"
+                app:spanCount="2"
+                tools:itemCount="8"
                 tools:listitem="@layout/product_item" />
 
         </LinearLayout>
