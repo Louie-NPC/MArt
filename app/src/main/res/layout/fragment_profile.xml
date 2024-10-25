@@ -36,7 +36,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView42"
+            android:id="@+id/userName"
             style="@style/txtIntersemibold18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
             android:src="@drawable/group10121286"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView42" />
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
 
         <TextView
             android:id="@+id/textView43"
@@ -175,7 +175,7 @@
             android:layout_width="111dp"
             android:layout_height="24dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="360dp"
+            android:layout_marginTop="352dp"
             android:ellipsize="end"
             android:gravity="center"
             android:paddingStart="@dimen/_24pxh"
@@ -186,32 +186,10 @@
             android:text="@string/lbl_edit_profile"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.256"
+            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/lbl_edit_profile" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnUpload"
-            style="@style/btnGradientRounded_1"
-            android:layout_width="111dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="360dp"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:paddingStart="@dimen/_30pxh"
-            android:paddingTop="@dimen/_4pxv"
-            android:paddingEnd="@dimen/_30pxh"
-            android:paddingBottom="@dimen/_4pxv"
-            android:singleLine="true"
-            android:text="@string/lbl_upload"
-            android:textAllCaps="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.74"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/lbl_upload" />
 
         <ImageView
             android:id="@+id/imageView16"

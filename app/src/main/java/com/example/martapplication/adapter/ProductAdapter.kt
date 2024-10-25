@@ -2,7 +2,6 @@ package com.example.martapplication.adapter
 
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +10,7 @@ import com.example.martapplication.ProductOverviewActivity
 import com.example.martapplication.databinding.ProductItemBinding
 
 class ProductAdapter(
-    private val images: List<Any>
+    private val images: MutableList<Any>
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -30,25 +29,25 @@ class ProductAdapter(
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(image: Any) {
+            // Handle both Uri and String types
             when (image) {
-                is Int -> binding.imageViewProduct.setImageResource(image) // Resource ID
-                is Uri -> { // Handle URI
+                is Uri -> {
                     Glide.with(binding.imageViewProduct.context)
                         .load(image)
                         .into(binding.imageViewProduct)
-                    Log.d("ProductAdapter", "Loaded URI: $image")
                 }
-                else -> Log.e("ProductAdapter", "Unknown image type: $image")
+                is String -> {
+                    Glide.with(binding.imageViewProduct.context)
+                        .load(image)
+                        .into(binding.imageViewProduct)
+                }
             }
 
-            // Handle product item click
+            // Set click listener to open ProductOverviewActivity
             binding.root.setOnClickListener {
                 val context = binding.root.context
                 val intent = Intent(context, ProductOverviewActivity::class.java)
-                when (image) {
-                    is Int -> intent.putExtra("image_res", image)
-                    is Uri -> intent.putExtra("imageUri", image.toString())
-                }
+                intent.putExtra("imageUri", image.toString())  // Pass URL or Uri as string
                 context.startActivity(intent)
             }
         }

@@ -1,83 +1,60 @@
 package com.example.martapplication.fragment
-
+import android.app.Activity
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.martapplication.ProductPosting
 import com.example.martapplication.R
 import com.example.martapplication.adapter.ProductAdapter
-import com.example.martapplication.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var recyclerViewProduct: RecyclerView
+    private lateinit var productAdapter: ProductAdapter
+    private var productImages: MutableList<Any> = mutableListOf()  // Holds image URIs
 
-    // Any type to support both Int (resource ID) and String (URI)
-    private val productImages = mutableListOf<Any>()
+    private val productPostingLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val imageUriString = result.data?.getStringExtra("imageUri")
+            if (imageUriString != null) {
+                val imageUri = Uri.parse(imageUriString)
+                addProduct(imageUri)  // Add the new image URI to the list
+            }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        return binding.root
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        recyclerViewProduct = view.findViewById(R.id.recyclerViewProduct)
+
+        // Initialize the adapter with the current list of images
+        productAdapter = ProductAdapter(productImages)
+        recyclerViewProduct.adapter = productAdapter
+
+        return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        // Initialize with drawable resources if not restoring state
-        if (savedInstanceState == null) {
-            productImages.addAll(
-                listOf(
-                    R.drawable.rectangle_18851,
-                    R.drawable.rectangle8850,
-                    R.drawable.rectangle18855,
-                    R.drawable.rectangle18856
-                )
-            )
-        } else {
-            // Restore only URIs, as we are not saving drawable resource IDs
-            savedInstanceState.getStringArrayList("productImages")?.let {
-                productImages.addAll(it.map { uriString -> Uri.parse(uriString) })
-            }
-        }
-
-        // Setup RecyclerView with adapter
-        val adapter = ProductAdapter(productImages)
-        binding.recyclerViewProduct.layoutManager = GridLayoutManager(requireContext(), 2) // Grid Layout
-        binding.recyclerViewProduct.adapter = adapter
-
-        // Check if there's a new image URI from ProductPosting and add it to the RecyclerView
-        arguments?.getString("imageUri")?.let { uriString ->
-            if (!uriString.isNullOrEmpty()) {
-                val uri = Uri.parse(uriString) // Convert back to URI
-                productImages.add(uri) // Add URI to the list
-                adapter.notifyItemInserted(productImages.size - 1)
-                Log.d("HomeFragment", "New image URI added: $uri")
-            } else {
-                Log.e("HomeFragment", "imageUri from arguments is null or empty")
-            }
-        }
+    // Method to add a new product to the list
+    fun addProduct(imageUri: Uri) {
+        productImages.add(imageUri)  // Add the new image URI to the list
+        productAdapter.notifyItemInserted(productImages.size - 1)  // Notify the adapter of the new item
     }
 
-    // Save productImages list on configuration change
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        val uriList = ArrayList<String>()
-        productImages.forEach {
-            if (it is Uri) uriList.add(it.toString()) // Save only URIs
-        }
-        outState.putStringArrayList("productImages", uriList)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    // Method to launch ProductPosting Activity
+    fun launchProductPosting() {
+        val intent = Intent(requireContext(), ProductPosting::class.java)
+        productPostingLauncher.launch(intent)
     }
 }

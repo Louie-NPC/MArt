@@ -75,6 +75,17 @@ dependencies {
     implementation(libs.firebase.appcheck.playintegrity)
     implementation (libs.kotlinx.coroutines.android)
 
+    implementation ("com.google.firebase:firebase-storage:20.2.1")
+    implementation ("com.google.firebase:firebase-firestore:24.8.1")
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
+    implementation ("com.google.firebase:firebase-database:20.0.0")
+
+    implementation ("com.google.firebase:firebase-auth:22.1.1")  // Firebase Auth SDK
+    // If using Firebase Firestore/Realtime Database
+    implementation ("com.google.firebase:firebase-database:20.3.0") // Realtime Database (optional)
+
+
 
 
 
